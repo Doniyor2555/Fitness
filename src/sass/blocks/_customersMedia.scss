@@ -1,0 +1,28 @@
+@media(max-width: 992px){
+  .customers{
+    &__wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+    &__descr{
+      width: 500px;
+      margin-left: 0;
+      margin-top: 25px;
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 576px){
+  .customers{
+    .title{
+      font-size: 25px;
+    }
+    &__descr{
+      width: 270px;
+    }
+  }
+}

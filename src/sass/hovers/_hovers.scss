@@ -1,0 +1,17 @@
+.promo{
+  .button{
+    transition: 0.5s all;
+    &:hover{
+      box-shadow: 3px 3px 25px $main-color;
+    }
+  }
+}
+
+.catalog{
+  .button{
+    transition: 0.5s all;
+    &:hover{
+      box-shadow: 3px 3px 25px $main-color;
+    }
+  }
+}

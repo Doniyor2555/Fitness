@@ -1,0 +1,28 @@
+@import 'base/variables';
+*{
+  font-family: "Museo Sans Cyrl", sans-serif;
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
+@import "blocks/advantages";
+@import "blocks/mediaheader";
+@import "blocks/advantagesmedia";
+@import "blocks/consultation";
+@import "blocks/title";
+@import "blocks/forms";
+@import "blocks/consultatationMedia";
+@import "blocks/formsMedia";
+@import "blocks/carousel";
+@import "blocks/catalog";
+@import "media/mediaSlider";
+@import "media/catalog";
+@import "blocks/customers";
+@import "blocks/customersMedia";
+@import "blocks/footer";
+@import "hovers/hovers";
+@import "media/mapMedia";

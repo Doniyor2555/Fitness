@@ -1,0 +1,29 @@
+.customers{
+  &__wrapper{
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 110px;
+  }
+  &__descr{
+    width: 655px;
+    margin-left: 61px;
+  }
+  &__header{
+    font-weight: 700;
+    font-size: 18px;
+    color: #0D0D0D;
+  }
+  &__subtitle{
+    font-weight: 500;
+    font-size: 14px;
+    color: #646464;
+  }
+  &__subtext{
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0D0D0D;
+  }
+}

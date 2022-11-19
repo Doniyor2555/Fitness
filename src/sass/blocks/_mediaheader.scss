@@ -1,0 +1,152 @@
+@media (max-width: 992px){
+  .promo{
+    &__wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__main__button{
+      position: relative;
+      left: 22%;
+    }
+    &__link{
+      position: relative;
+      left: 27%;
+    }
+    &__button{
+      &:hover{
+        background-color: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .header{
+    width: 100%;
+    &__logo{
+      img{
+        width: 80%;
+      }
+    }
+  }
+  .button{
+    box-shadow: none;
+  }
+}
+
+
+
+@media (max-width: 768px){
+.promo{
+  .header__logo{
+    position: relative;
+    width: 30%;
+    left: 30px;
+  }
+  &__header{
+    font-size: 35px;
+    position: relative;
+    right: 30px;
+  }
+  &__subheader{
+    position: relative;
+    right: 30px;
+    font-size: 22px;
+  }
+  &__link{
+    position: relative;
+    right: 25px;
+  }
+}
+.header__contacts{
+  position: relative;
+  right: 20px;
+}
+.button_main{
+  position: relative;
+  right: 20px;
+}
+}
+
+@media (max-width: 576px){
+  .promo{
+    max-height: 800px;
+    .header__logo{
+      img{
+        position: relative;
+        right: 20px;
+        width: 100%;
+      }
+    }
+    &__button{
+      position: relative;
+      left: 10px;
+      width: 89px;
+      height: 28px;
+      font-size: 8px;
+    }
+    &__official{
+      font-size: 7px;
+      span{
+        font-size: 9px;
+      }
+    }
+    &__header{
+      font-size: 22px;
+    }
+    &__subheader{
+      font-size: 13px;
+    }
+    &__icons{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      right: 20px;
+      margin-top: 20px;
+    }
+    &__main__button{
+      width: 200px;
+      font-size: 13px;
+    }
+    &__link{
+      font-size: 15px;
+    }
+  }
+  .header{
+    &__phone{
+      font-size: 9px;
+    }
+  }
+}
+
+@media (max-width: 320px){
+  .promo{
+    &__header{
+      font-size: 20px;
+      margin-left: 45px;
+    }
+    &__subheader{
+      font-size: 12px;
+      margin-left: 45px;
+    }
+    &__main__button{
+      width: 150px;
+    }
+    &__link{
+      margin-right: 40px;
+      font-size: 13px;
+    }
+    .button_xl{
+      width: 85px;
+      height: 30px;
+      font-size: 8px;
+    }
+  }
+}
+.button{
+  &:hover{
+    box-shadow: none;
+  }
+}
