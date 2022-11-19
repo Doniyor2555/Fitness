@@ -118,9 +118,26 @@ function removeLink (){
 function catalogBlock(){
   catalogContent.forEach(item => {
     item.style.display = 'block';
-    item.style.transition = `0.5s all`;
   });
 }
+
+  // Modal
+
+
+const modalTrigger = document.querySelector("[data-modal=consultation]"),
+      overlay = document.querySelector(".overlay"),
+      modal = document.querySelector("#consultation"),
+      modalCloseBtn = document.querySelector("[data-close]");
+
+modalTrigger.addEventListener('click', () => {
+  overlay.classList.add("show");
+  modal.classList.remove("hide");
+  modal.classList.add("show, animation");
+  modal.classList.add("animation");
+  // modal.style.display = 'block'
+});
+
+
 
 // let arr = [5, 3, 8, 1, 2, 7];
 // function filterArr (array,a, b){
