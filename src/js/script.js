@@ -124,19 +124,28 @@ function catalogBlock(){
   // Modal
 
 
-const modalTrigger = document.querySelector("[data-modal=consultation]"),
+const modalTrigger = document.querySelectorAll("[data-modal=consultation]"),
       overlay = document.querySelector(".overlay"),
       modal = document.querySelector("#consultation"),
-      modalCloseBtn = document.querySelector("[data-close]");
+      modalCloseBtn = document.querySelector(".modal__close");
 
-modalTrigger.addEventListener('click', () => {
+function modalOpen(){
   overlay.classList.add("show");
   modal.classList.remove("hide");
   modal.classList.add("show, animation");
   modal.classList.add("animation");
-  // modal.style.display = 'block'
-});
+}
 
+modalTrigger.forEach(item => {
+  item.addEventListener("click",   modalOpen)
+}); 
+
+function closeModal(){
+  overlay.classList.remove("show");
+  modal.classList.add("hide");
+  modal.classList.remove("show, animation");
+}
+modalCloseBtn.addEventListener("click", closeModal);
 
 
 // let arr = [5, 3, 8, 1, 2, 7];
