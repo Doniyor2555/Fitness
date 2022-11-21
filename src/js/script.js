@@ -124,18 +124,53 @@ function catalogBlock(){
   // Modal
 
 
-const modalTrigger = document.querySelector("[data-modal=consultation]"),
+const modalTrigger = document.querySelectorAll("[data-modal=consultation]"),
       overlay = document.querySelector(".overlay"),
       modal = document.querySelector("#consultation"),
-      modalCloseBtn = document.querySelector("[data-close]");
+      modalCloseBtn = document.querySelector(".modal__close"),
+      button_mini = document.querySelectorAll(".button_mini"),
+      secondModal = document.querySelector("#order");
 
-modalTrigger.addEventListener('click', () => {
+function modalOpen(){
   overlay.classList.add("show");
   modal.classList.remove("hide");
-  modal.classList.add("show, animation");
+  modal.classList.add("show");
   modal.classList.add("animation");
-  // modal.style.display = 'block'
-});
+}
+
+modalTrigger.forEach(item => {
+  item.addEventListener("click",   modalOpen);
+}); 
+
+function closeModal(){
+  overlay.classList.remove("show");
+  modal.classList.add("hide");
+  modal.classList.remove("show");
+}
+function xClose(){
+  modalCloseBtn.addEventListener("click", closeModal, closeModalSecond);
+}
+xClose();
+
+function openSecondModal(){
+  button_mini.forEach(item => {
+    item.addEventListener("click", () => {
+      overlay.classList.add("show");
+      secondModal.classList.add("show");
+      secondModal.classList.remove("hide");
+    });
+  });
+}
+
+openSecondModal();
+
+function closeModalSecond(){
+  
+}
+
+
+
+xClose();
 
 
 
@@ -147,6 +182,3 @@ modalTrigger.addEventListener('click', () => {
 
 // console.log(filterArr(arr, 1, 6));
 // console.log(arr);
-
-
-
