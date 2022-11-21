@@ -127,13 +127,19 @@ function catalogBlock(){
 const modalTrigger = document.querySelectorAll("[data-modal=consultation]"),
       overlay = document.querySelector(".overlay"),
       modal = document.querySelector("#consultation"),
-<<<<<<< HEAD
       modalCloseBtn = document.querySelector(".modal__close"),
       button_mini = document.querySelectorAll(".button_mini"),
-      secondModal = document.querySelector("#order");
-=======
-      modalCloseBtn = document.querySelector(".modal__close");
->>>>>>> 93d829195cff26517c895252c0a57145fffe82f4
+      secondModal = document.querySelector("#order"),
+      closeSecond = document.querySelector("#closeSecond"),
+      text = document.querySelectorAll("#order .modal__descr"),
+      data = document.querySelectorAll(".catalog-item__subtitle")
+let textContent;
+
+    
+data.forEach(item => {
+  textContent = item.textContent;
+ 
+});
 
 function modalOpen(){
   overlay.classList.add("show");
@@ -141,7 +147,6 @@ function modalOpen(){
   modal.classList.add("show");
   modal.classList.add("animation");
 }
-<<<<<<< HEAD
 
 modalTrigger.forEach(item => {
   item.addEventListener("click",   modalOpen);
@@ -153,43 +158,44 @@ function closeModal(){
   modal.classList.remove("show");
 }
 function xClose(){
-  modalCloseBtn.addEventListener("click", closeModal, closeModalSecond);
+  modalCloseBtn.addEventListener("click", closeModal);
 }
 xClose();
 
 function openSecondModal(){
-  button_mini.forEach(item => {
-    item.addEventListener("click", () => {
+  // button_mini.forEach(item => {
+    // item.addEventListener("click", () => {
       overlay.classList.add("show");
       secondModal.classList.add("show");
       secondModal.classList.remove("hide");
-    });
-  });
+      
+  //   });
+  // });
 }
 
-openSecondModal();
+// openSecondModal();
 
 function closeModalSecond(){
+  overlay.classList.remove("show");
+  // modal.classList.add("hide");
+  // modal.classList.remove("show");
+} 
+
+closeSecond.addEventListener("click",  closeModalSecond);
+
+function a(){
+  button_mini.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const target = e.target;
+      const strContent = textContent;
+      openSecondModal(strContent);
+      console.log(target);
+    });
+  });
   
 }
 
-
-
-xClose();
-=======
->>>>>>> 93d829195cff26517c895252c0a57145fffe82f4
-
-modalTrigger.forEach(item => {
-  item.addEventListener("click",   modalOpen)
-}); 
-
-function closeModal(){
-  overlay.classList.remove("show");
-  modal.classList.add("hide");
-  modal.classList.remove("show, animation");
-}
-modalCloseBtn.addEventListener("click", closeModal);
-
+a();
 
 // let arr = [5, 3, 8, 1, 2, 7];
 // function filterArr (array,a, b){
