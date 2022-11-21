@@ -127,9 +127,13 @@ function catalogBlock(){
 const modalTrigger = document.querySelectorAll("[data-modal=consultation]"),
       overlay = document.querySelector(".overlay"),
       modal = document.querySelector("#consultation"),
+<<<<<<< HEAD
       modalCloseBtn = document.querySelector(".modal__close"),
       button_mini = document.querySelectorAll(".button_mini"),
       secondModal = document.querySelector("#order");
+=======
+      modalCloseBtn = document.querySelector(".modal__close");
+>>>>>>> 93d829195cff26517c895252c0a57145fffe82f4
 
 function modalOpen(){
   overlay.classList.add("show");
@@ -137,6 +141,7 @@ function modalOpen(){
   modal.classList.add("show");
   modal.classList.add("animation");
 }
+<<<<<<< HEAD
 
 modalTrigger.forEach(item => {
   item.addEventListener("click",   modalOpen);
@@ -171,7 +176,19 @@ function closeModalSecond(){
 
 
 xClose();
+=======
+>>>>>>> 93d829195cff26517c895252c0a57145fffe82f4
 
+modalTrigger.forEach(item => {
+  item.addEventListener("click",   modalOpen)
+}); 
+
+function closeModal(){
+  overlay.classList.remove("show");
+  modal.classList.add("hide");
+  modal.classList.remove("show, animation");
+}
+modalCloseBtn.addEventListener("click", closeModal);
 
 
 // let arr = [5, 3, 8, 1, 2, 7];
