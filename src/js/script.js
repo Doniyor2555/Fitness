@@ -131,8 +131,10 @@ const modalTrigger = document.querySelectorAll("[data-modal=consultation]"),
       button_mini = document.querySelectorAll(".button_mini"),
       secondModal = document.querySelector("#order"),
       closeSecond = document.querySelector("#closeSecond"),
-      text = document.querySelectorAll("#order .modal__descr"),
-      data = document.querySelectorAll(".catalog-item__subtitle")
+      text = document.querySelector("#order .modal__descr_name"),
+      data = document.querySelectorAll(".catalog-item__subtitle"),
+      modal__descr_name = document.querySelector(".modal__descr_name"),
+      catalogItem = document.querySelectorAll(".catalog-item");
 let textContent;
 
     
@@ -149,7 +151,10 @@ function modalOpen(){
 }
 
 modalTrigger.forEach(item => {
-  item.addEventListener("click",   modalOpen);
+  item.addEventListener("click", () => {
+    modalOpen();
+    modal__descr_name.innerHTML = "и мы перезвоним вам в течении 10 минут";
+  }); 
 }); 
 
 function closeModal(){
@@ -163,33 +168,38 @@ function xClose(){
 xClose();
 
 function openSecondModal(){
-  // button_mini.forEach(item => {
-    // item.addEventListener("click", () => {
       overlay.classList.add("show");
       secondModal.classList.add("show");
       secondModal.classList.remove("hide");
-      
-  //   });
-  // });
 }
 
-// openSecondModal();
 
 function closeModalSecond(){
   overlay.classList.remove("show");
-  // modal.classList.add("hide");
-  // modal.classList.remove("show");
+  secondModal.classList.add("hide");
+  secondModal.classList.remove("show");
 } 
 
 closeSecond.addEventListener("click",  closeModalSecond);
 
 function a(){
   button_mini.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      const target = e.target;
-      const strContent = textContent;
-      openSecondModal(strContent);
-      console.log(target);
+    btn.addEventListener("click", () => {
+      openSecondModal();
+      btn.setAttribute("ss", '111');
+      catalogItem.forEach(item => {
+        item.addEventListener("click", () => {
+          if (btn.hasAttribute('ss')) {
+            let obj = item.children[0];
+            let kkk = obj.children[0];
+            let iii = kkk.getElementsByClassName('catalog-item__subtitle');
+            let showName = iii[0];
+            showName.getElementsByClassName('catalog-item__subtitle')
+            btn.removeAttribute('ss');
+            modal__descr_name.innerHTML = `${showName.innerHTML}`;
+          }
+        });
+      });
     });
   });
   
