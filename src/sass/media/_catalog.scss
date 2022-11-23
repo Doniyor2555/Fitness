@@ -10,7 +10,34 @@
         width: 190px;
       }
     }
+    &-item{
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 255px;
+      position: relative;
+      margin: 25px;
+      &__img{
+        height: 150px;
+      &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+      }
+    }
   }
+    &__tab{
+      position: relative;
+      left: 5%;
+      width: 150px;
+      &:hover{
+        width: 150px;
+        box-shadow: none;
+      }
+    }
+}
+
 }
 @media(max-width: 576px){
   .catalog{
