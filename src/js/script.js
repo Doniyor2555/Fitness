@@ -133,7 +133,10 @@ const modalTrigger = document.querySelectorAll("[data-modal=consultation]"),
       secondModal = document.querySelector("#order"),
       closeSecond = document.querySelector("#closeSecond"),
       modal__descr_name = document.querySelector(".modal__descr_name"),
-      catalogItem = document.querySelectorAll(".catalog-item");
+      catalogItem = document.querySelectorAll(".catalog-item"),
+      buttonSubmit = document.querySelector(".button_submit"),
+      thanksModal = document.querySelector("#thanks");
+
 
 
 function modalOpen(){
@@ -198,3 +201,4 @@ function showModalByName(){
 }
 
 showModalByName();
+
