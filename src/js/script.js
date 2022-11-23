@@ -131,17 +131,9 @@ const modalTrigger = document.querySelectorAll("[data-modal=consultation]"),
       button_mini = document.querySelectorAll(".button_mini"),
       secondModal = document.querySelector("#order"),
       closeSecond = document.querySelector("#closeSecond"),
-      text = document.querySelector("#order .modal__descr_name"),
-      data = document.querySelectorAll(".catalog-item__subtitle"),
       modal__descr_name = document.querySelector(".modal__descr_name"),
       catalogItem = document.querySelectorAll(".catalog-item");
-let textContent;
 
-    
-data.forEach(item => {
-  textContent = item.textContent;
- 
-});
 
 function modalOpen(){
   overlay.classList.add("show");
@@ -153,9 +145,10 @@ function modalOpen(){
 modalTrigger.forEach(item => {
   item.addEventListener("click", () => {
     modalOpen();
-    modal__descr_name.innerHTML = "и мы перезвоним вам в течении 10 минут";
+    // modal__descr_name.innerHTML = "и мы перезвоним вам в течении 10 минут";
   }); 
 }); 
+
 
 function closeModal(){
   overlay.classList.remove("show");
@@ -182,20 +175,19 @@ function closeModalSecond(){
 
 closeSecond.addEventListener("click",  closeModalSecond);
 
-function a(){
+function showModalByName(){
   button_mini.forEach(btn => {
     btn.addEventListener("click", () => {
       openSecondModal();
-      btn.setAttribute("ss", '111');
+      btn.setAttribute("btn", 'button');
       catalogItem.forEach(item => {
         item.addEventListener("click", () => {
-          if (btn.hasAttribute('ss')) {
-            let obj = item.children[0];
-            let kkk = obj.children[0];
-            let iii = kkk.getElementsByClassName('catalog-item__subtitle');
-            let showName = iii[0];
-            showName.getElementsByClassName('catalog-item__subtitle')
-            btn.removeAttribute('ss');
+          if (btn.hasAttribute('btn')) {
+            let obj = item.children[0]; // wrapper
+            let catalogItem = obj.children[0], // catalog item
+            subtitle = catalogItem.getElementsByClassName('catalog-item__subtitle'); // sam subtitle
+            showName = subtitle[0]; // sam subtitle
+            btn.removeAttribute('btn');
             modal__descr_name.innerHTML = `${showName.innerHTML}`;
           }
         });
@@ -205,13 +197,5 @@ function a(){
   
 }
 
-a();
+showModalByName();
 
-// let arr = [5, 3, 8, 1, 2, 7];
-// function filterArr (array,a, b){
-//   return array.filter((x) => x >= a && x <= b);
-// }
-
-
-// console.log(filterArr(arr, 1, 6));
-// console.log(arr);
