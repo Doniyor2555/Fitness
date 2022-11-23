@@ -10,6 +10,15 @@
   }
 }
 
+@media (max-width: 768px){
+  .advantages{
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;    
+    margin-left: 30px;
+  }
+}
+}
 @media (max-width: 576px){
   .advantages{
     &__wrapper{
@@ -17,6 +26,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
     }
     &__item{
       margin-top: 40px;

@@ -1,0 +1,44 @@
+@media(max-width: 576px){
+  .modal{
+    width: 300px;
+    &__subtitle{
+      font-size: 13px;
+      font-weight: 200;
+    }
+    &__descr{
+      margin-top: 7px;
+      font-size: 13px;
+      position: relative;
+      right: -50%;
+      transform: translateX(-50%);
+    }
+    .feed-form{
+      width: 250px;
+    }
+  }
+}
+
+@media(max-width: 320px){
+  .modal{
+    width: 210px;
+    top: 33%;
+    &__subtitle{
+      font-size: 8px;
+      font-weight: bold;
+    }
+    &__descr{
+      margin-top: 7px;
+      font-size: 8px;
+      position: relative;
+      right: -50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+    .feed-form{
+      width: 150px;
+      .button{
+        font-size: 8px;
+      }
+    }
+  }
+}
