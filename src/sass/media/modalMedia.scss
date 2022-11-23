@@ -20,11 +20,21 @@
 
 @media(max-width: 320px){
   .modal{
+    position: relative;
     width: 210px;
-    top: 33%;
+    top: 25%;
+    transform: translateY(-5%);
+    left: -5%;
+    transform: translateX(50%);
     &__subtitle{
       font-size: 8px;
       font-weight: bold;
+    }
+    &__close{
+      position: absolute;
+      right: -30px;
+      line-height:  10px;
+      font-size: 25px;
     }
     &__descr{
       margin-top: 7px;
