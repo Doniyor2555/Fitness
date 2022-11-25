@@ -138,7 +138,6 @@ const modalTrigger = document.querySelectorAll("[data-modal=consultation]"),
       thanksModal = document.querySelector("#thanks");
 
 
-
 function modalOpen(){
   overlay.classList.add("show");
   modal.classList.remove("hide");
