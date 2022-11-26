@@ -34,10 +34,7 @@
   }
   &__icon{
     &_animated{
-      animation-name: hearbeat;
-      animation-duration: 1.5s;
-      animation-timing-function: ease;
-      animation-iteration-count: infinite;
+      animation: hearbeat 1.5s ease infinite;
       &:hover{
         animation-play-state: paused;
       }
