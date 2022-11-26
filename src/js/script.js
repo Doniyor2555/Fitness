@@ -201,6 +201,11 @@ function showModalByName(){
 
 showModalByName();
 
+
+
+
+// pageUp
+
 const pageUp = document.querySelector(".pageup");
 
 
@@ -210,4 +215,8 @@ window.addEventListener("scroll", () => {
   } else{
     pageUp.style.display = 'none';
   }
+
 });
+
+
+
