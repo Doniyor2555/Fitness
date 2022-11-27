@@ -218,3 +218,6 @@ window.addEventListener("scroll", () => {
 });
 
 
+new WOW().init();
+
+
