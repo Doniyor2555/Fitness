@@ -211,12 +211,10 @@ const pageUp = document.querySelector(".pageup");
 
 window.addEventListener("scroll", () => {
   if(window.scrollY >= 1500){
-    pageUp.style.display = 'block'
+    pageUp.style.display = 'block';
   } else{
     pageUp.style.display = 'none';
   }
-
 });
-
 
 
