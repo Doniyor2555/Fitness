@@ -1,7 +1,7 @@
 // Slider
 const slides = document.querySelectorAll(".slider__offer"),
       prev = document.querySelector(".slider__prev-arrow"),
-      next = document.querySelector(".slider__next-arrow");
+      next = document.querySelector(".slider__next-arrow")
 
 let slideIndex = 1
 
